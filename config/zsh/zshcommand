@@ -1,0 +1,37 @@
+h-my-zsh===========================
+
+wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
+
+==================hlghligiting==========================
+git clone git://github.com/jimmijj/zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
+
+plugins=(zsh-syntax-highlighting) 
+
+=============================================
+
+
+git clone git://github.com/joelthelion/autojump.git 
+
+./install.py  
+
+在～/.zshrc文件中加入此句
+[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh  
+
+
+==============自动补全======
+http://mimosa-pudica.net/zsh-incremental.html
+
+http://mimosa-pudica.net/src/incr-0.2.zsh
+
+1——在官网下载此插件 
+2——在官网copy后建议放在 ～/.oh-my-zsh/plugins/incr/incr-0.2.zsh（中间的目录是博主创建的便于管理） 
+3——赋予该文件777权限
+chmod 777 ～/.oh-my-zsh/plugins/incr/incr-0.2.zsh
+
+1
+2
+4——然后在～/.zshrc文件中加入此句
+source ~/.oh-my-zsh/plugins/incr/incr-0.2.zsh
+
+
