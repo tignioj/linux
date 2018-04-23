@@ -1,15 +1,39 @@
 
-h-my-zsh===========================
+===================oh-my-zsh============================
 
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
+ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+==========Manual Installation==============================
+1. Clone the repository:
+
+git clone https://github.com/robbyrussell/oh-my-zsh.git ~/zsh/.oh-my-zsh
+
+
+2. Optionally, backup your existing ~/.zshrc file:
+cp ~/.zshrc ~/.zshrc.orig
+
+
+3. Create a new zsh configuration file
+You can create a new zsh config file by copying the template that we have included for you.
+
+
+cp ~/zsh/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+4. Change your default shell
+chsh -s /bin/zsh
+
+
+
+
 ==================hlghligiting==========================
+
 git clone git://github.com/jimmijj/zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
 
 plugins=(zsh-syntax-highlighting) 
 
-=============================================
+=======================================================
 
 
 git clone git://github.com/joelthelion/autojump.git 
@@ -20,7 +44,7 @@ git clone git://github.com/joelthelion/autojump.git
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh  
 
 
-==============自动补全
+=====================自动补全===========================
 http://mimosa-pudica.net/zsh-incremental.html
 
 http://mimosa-pudica.net/src/incr-0.2.zsh
@@ -37,3 +61,18 @@ source ~/.oh-my-zsh/plugins/incr/incr-0.2.zsh
 
 1
 
+
+
+
+
+
+==========================Powerline==================
+
+# clone
+git clone https://github.com/powerline/fonts.git --depth=1
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
