@@ -47,10 +47,9 @@ then
 	echo "done"
 	echo -e "\n\ninstalling fonts-powerline====>"
 		git clone https://github.com/powerline/fonts.git --depth=1 && cd fonts &&sh install.sh	
-		cd fonts
-		./install.sh
 		cd ..
 		rm -rf fonts
+		cd ..
 	echo "done"
 		zsh
 	echo -e "complete"
