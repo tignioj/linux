@@ -1,9 +1,9 @@
 #!/bin/bash
 
-echo"======This is a zsh config script======="
-echo "Do you want to config it by manully or auto config?"
-echo "1. Manully"
-echo "2. auto-config"
+echo"======This is oh-my-zsh config script======="
+echo "Do you want to confit it by wget||crul or git?"
+echo "1. by wget or crul "
+echo "2. by git"
 read NUM
 echo "you choose $NUM"
 if [ $NUM -eq 1 ]
@@ -39,14 +39,18 @@ then
 	echo -e "\n\n===========cp .zshrc ~/==============="
 		cp .zshrc ~/
 	echo "done"
-	echo -e "\n\n==========git clone plugins of hl============="
+	echo -e "\n\n==========git clone plugins of hl========"
 		git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 	echo "done"
-	echo -e "\n\ngit clone clone of auto suggestion"
+	echo -e "\n\ngit clone clone of auto suggestion====>"
 		git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 	echo "done"
-	echo -e "\n\ninstalling fonts-powerline"
+	echo -e "\n\ninstalling fonts-powerline====>"
 		git clone https://github.com/powerline/fonts.git --depth=1 && cd fonts &&sh install.sh	
+		cd fonts
+		./install.sh
+		cd ..
+		rm -rf fonts
 	echo "done"
 		zsh
 	echo -e "complete"
