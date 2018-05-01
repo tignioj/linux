@@ -8,8 +8,17 @@ read NUM
 echo "you choose $NUM"
 if [ $NUM -eq 1 ]
 then
-	echo "wget it"
-	echo "or curl"
+	if test $(which wget)
+	then
+		echo "wget it"
+		sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+	elif test $(which crul)
+		sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	then
+		echo "crul it"
+	else
+		echo "no wget or crul, Please install wget or crul in you computer"
+	fi
 elif [ $NUM -eq 2 ]
 then
 	echo -e "\n\ngit clone oh-my-zsh"

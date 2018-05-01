@@ -1,3 +1,11 @@
+""=====prevent zh unknow code======"
+ 
+set encoding=utf-8
+set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
+""======END=======
+
+
+
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
