@@ -2,15 +2,15 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/lili/.oh-my-zsh
+  export ZSH=$HOME/.oh-my-zsh
+  export TERM="xterm-256color"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="random"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 ZSH_THEME_RANDOM_CANDIDATES=(
-  "robbyrussell"
     "agnoster"
 	"ys"
 	)
@@ -69,9 +69,12 @@ plugins=(
 	git
 	autojump
 	zsh-syntax-highlighting
+	wd
+	z
 )
-[[ -s /home/lili/.autojump/etc/profile.d/autojump.sh ]] && source /home/lili/.autojump/etc/profile.d/autojump.sh
+[[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh
 source $ZSH/oh-my-zsh.sh
+source $ZSH/plugins/incr/incr-0.2.zsh
 
 # User configuration
 

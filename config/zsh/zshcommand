@@ -1,5 +1,5 @@
 
-===================oh-my-zsh============================
+===================oh-my-zsh auto install============================
 
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
@@ -8,7 +8,7 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 ==========Manual Installation==============================
 1. Clone the repository:
 
-git clone https://github.com/robbyrussell/oh-my-zsh.git ~/zsh/.oh-my-zsh
+git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
 
 2. Optionally, backup your existing ~/.zshrc file:
@@ -23,26 +23,24 @@ cp ~/zsh/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 4. Change your default shell
 chsh -s /bin/zsh
 
-
-
-
+======================Pluins==================================
 ==================hlghligiting==========================
 
-git clone https://github.com/jimmijj/zsh-syntax-highlighting ~/zsh/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 
 plugins=(zsh-syntax-highlighting) 
 
-=======================================================
+=======================autojump================================
 
 
 git clone git://github.com/joelthelion/autojump.git 
 
 ./install.py  
 
-在～/.zshrc文件中加入此句
+在～/.zshrc文件中加入此句(you should see the command after you install)
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh  
-
 
 =====================自动补全===========================
 http://mimosa-pudica.net/zsh-incremental.html
@@ -50,23 +48,26 @@ http://mimosa-pudica.net/zsh-incremental.html
 http://mimosa-pudica.net/src/incr-0.2.zsh
 
 1——在官网下载此插件 
-2——在官网copy后建议放在 ～/.oh-my-zsh/plugins/incr/incr-0.2.zsh（中间的目录是博主创建的便于管理） 
+2——在官网copy后建议放在 ～/.oh-my-zsh/plugins/incr/incr-0.2.zsh 
 3——赋予该文件777权限
 chmod 777 ～/.oh-my-zsh/plugins/incr/incr-0.2.zsh
 
-1
-2
 4——然后在～/.zshrc文件中加入此句
 source ~/.oh-my-zsh/plugins/incr/incr-0.2.zsh
 
-1
+==================auto-complete2====================
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+plugin=(zsh-autosuggestions)
+
+
+==================om-my-zsh-onwer==============
+plugins=(wd z )
 
 
 
-
-
-
-==========================Powerline==================
+===================font of Powerline==================
 
 # clone
 git clone https://github.com/powerline/fonts.git --depth=1

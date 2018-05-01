@@ -1,0 +1,49 @@
+#!/bin/bash
+
+echo"======This is a zsh config script======="
+echo "Do you want to config it by manully or auto config?"
+echo "1. Manully"
+echo "2. auto-config"
+read NUM
+echo "you choose $NUM"
+if [ $NUM -eq 1 ]
+then
+	echo "wget it"
+	echo "or curl"
+elif [ $NUM -eq 2 ]
+then
+	echo -e "\n\ngit clone oh-my-zsh"
+		git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+	echo "done"
+	echo -e "\n\n=======git clone theme======="
+		git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+	echo "done"
+	echo -e "\n\n=======mkdir -p ..========"
+		mkdir -p ~/.oh-my-zsh/plugins/incr 
+	echo "done"
+	echo -e "\n\n========chomd 777 incr-0.2.zsh,please give the power========"
+		sudo chmod 777 incr-0.2.zsh
+	echo "done"
+	echo -e "\n\n========cp incr.. ~/.oh-m..============"
+		cp incr-0.2.zsh ~/.oh-my-zsh/plugins/incr/
+	echo "done"
+	echo -e "\n\n===========cp .zshrc ~/==============="
+		cp .zshrc ~/
+	echo "done"
+	echo -e "\n\n==========git clone plugins of hl============="
+		git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+	echo "done"
+	echo -e "\n\ngit clone clone of auto suggestion"
+		git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+	echo "done"
+	echo -e "\n\ninstalling fonts-powerline"
+		git clone https://github.com/powerline/fonts.git --depth=1 && cd fonts &&sh install.sh	
+	echo "done"
+		zsh
+	echo -e "complete"
+	echo -e "\n\nnow you should choose the font of powerline in the shell config\n\n"
+fi
+
+
+
+	
