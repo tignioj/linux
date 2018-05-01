@@ -71,8 +71,8 @@ plugins=(
 	zsh-syntax-highlighting
 	wd
 	z
+	zsh-autosuggestions
 )
-[[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh
 source $ZSH/oh-my-zsh.sh
 source $ZSH/plugins/incr/incr-0.2.zsh
 
