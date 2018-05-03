@@ -67,11 +67,14 @@ ZSH_THEME_RANDOM_CANDIDATES=(
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
-	autojump
-	zsh-syntax-highlighting
 	wd
 	z
+	archlinux
+	sudo
+	extract
+	vim
 	zsh-autosuggestions
+	zsh-syntax-highlighting
 )
 source $ZSH/oh-my-zsh.sh
 source $ZSH/plugins/incr/incr-0.2.zsh
