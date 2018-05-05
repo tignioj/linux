@@ -23,7 +23,21 @@ then
 		echo "crul it"
 		sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	else
-		echo "no wget or crul, Please install wget or crul in you computer"
+		echo "no wget or crul,Now auto install wget and crul in you computer"
+		#tesh system====================
+		echo "testing your system========"
+		if  ( uname -a | grep -i 'arch' )
+		then
+			echo "your system is archlinux"
+			echo 000000 | sudo -S pacman -S --noconfirm wget crul
+			sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+		elif ( uname -a | grep -i 'ubuntu' )
+		then
+			echo "your system is ubuntu"
+			echo 000000 | sudo -S apt-get install wget crul
+			sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+		fi
+		#===============================
 	fi
 elif [ $NUM -eq 2 ]
 then
