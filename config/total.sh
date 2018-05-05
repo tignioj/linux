@@ -35,7 +35,7 @@ then
 elif [ $MY_SYS -eq 2 ]
 then
 	echo "installing tmux vim zsh by pacman"
-	echo "000000" | sudo -S pacman -Sy --noconfirm tmux vim zsh	
+	echo "000000" | sudo -S pacman -Sy --noconfirm --needed tmux vim zsh	
 	echo "done"
 elif [ $MY_SYS -eq 3 ]
 then

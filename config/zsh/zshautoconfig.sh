@@ -51,7 +51,7 @@ then
 		mkdir -p ~/.oh-my-zsh/plugins/incr 
 	echo "done"
 	echo -e "\n\n========chomd 777 incr-0.2.zsh,please give the power========"
-		sudo chmod 777 incr-0.2.zsh
+		echo 000000 | sudo -S chmod 777 incr-0.2.zsh
 	echo "done"
 	echo -e "\n\n========cp incr.. ~/.oh-m..============"
 		cp incr-0.2.zsh ~/.oh-my-zsh/plugins/incr/
