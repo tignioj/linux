@@ -46,7 +46,7 @@ fi
 
 
 
-
+cd ~/clone/linux/config/
 echo "<<<<=================tmux===================>>>>"
 cd tmux
 ./tmuxautoconfig.sh
