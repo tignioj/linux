@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo"======This is oh-my-zsh config script======="
+echo "======This is oh-my-zsh config script======="
 echo "Do you want to confit it by wget||crul or git?"
 echo "1. by wget or crul "
 echo "2. by git"

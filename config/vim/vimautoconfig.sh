@@ -9,6 +9,5 @@ echo "========This is vim auto config script=========="
 	echo "done"
 	echo -e "\n\nInstalling plugins====>"
 	vim +PluginInstall +qall
-	vim -c 'PluginInstall'
 	echo "done"
 	echo "Enjoy"
