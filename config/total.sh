@@ -26,18 +26,18 @@ then
         #===========================         
 fi
 
-if [ $MY_SYS -eq 1 ]
+if [[ ${MY_SYS} -eq 1 ]]
 then
 	echo "installing tmux vim zsh by apt-get"
 	echo "000000" | sudo -S apt-get update
 	echo "000000" | sudo -S apt-get install tmux vim zsh
 	echo "done"
-elif [ $MY_SYS -eq 2 ]
+elif [[ $MY_SYS -eq 2 ]]
 then
 	echo "installing tmux vim zsh by pacman"
 	echo "000000" | sudo -S pacman -Sy --noconfirm --needed tmux vim zsh	
 	echo "done"
-elif [ $MY_SYS -eq 3 ]
+elif [[ $MY_SYS -eq 3 ]]
 then
 	echo "just config"
 else

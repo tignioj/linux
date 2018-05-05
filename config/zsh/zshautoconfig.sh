@@ -5,14 +5,14 @@ echo "Do you want to confit it by wget||crul or git?"
 echo "1. by wget or crul "
 echo "2. by git"
 read -p "you number is :(defalut is 2)" -t 5 NUM
-if [ $? -eq 142 ]
+if [[ $? -eq 142 ]]
 then
 	NUM=2
 else
 echo "you choose $NUM"
 fi
 
-if [ $NUM -eq 1 ]
+if [[ $NUM -eq 1 ]]
 then
 	if test $(which wget)
 	then
@@ -39,7 +39,7 @@ then
 		fi
 		#===============================
 	fi
-elif [ $NUM -eq 2 ]
+elif [[ $NUM -eq 2 ]]
 then
 	echo -e "\n\ngit clone oh-my-zsh"
 		git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
