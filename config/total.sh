@@ -10,13 +10,13 @@ read SYS
 if [ $SYS -eq 1 ]
 then
 	echo "installing tmux vim zsh by apt-get"
-	sudo apt-get update
-	sudo apt-get install tmux vim zsh
+	echo "000000" | sudo -S apt-get update
+	echo "000000" | sudo -S apt-get install tmux vim zsh
 	echo "done"
 elif [ $SYS -eq 2 ]
 then
 	echo "installing tmux vim zsh by pacman"
-	sudo pacman -Sy tmux vim zsh	
+	echo "000000" | sudo -S pacman -Sy --noconfirm tmux vim zsh	
 	echo "done"
 elif [ $SYS -eq 3 ]
 then
