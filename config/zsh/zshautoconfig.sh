@@ -4,8 +4,14 @@ echo"======This is oh-my-zsh config script======="
 echo "Do you want to confit it by wget||crul or git?"
 echo "1. by wget or crul "
 echo "2. by git"
-read NUM
+read -p "you number is :(defalut is 2)" -t 5 NUM
+if [ $? -eq 142 ]
+then
+	NUM=2
+else
 echo "you choose $NUM"
+fi
+
 if [ $NUM -eq 1 ]
 then
 	if test $(which wget)
@@ -13,9 +19,9 @@ then
 		echo "wget it"
 		sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 	elif test $(which crul)
-		sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	then
 		echo "crul it"
+		sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	else
 		echo "no wget or crul, Please install wget or crul in you computer"
 	fi
