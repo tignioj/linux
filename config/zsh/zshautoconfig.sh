@@ -68,10 +68,9 @@ then
 	echo -e "\n\ninstalling fonts-powerline====>"
 		git clone https://github.com/powerline/fonts.git --depth=1 && cd fonts &&sh install.sh	
 		cd ..
-		rm -rf fonts
 		cd ..
 	echo "done"
-		zsh
+		echo 000000 | zsh -c 'chsh -s /bin/zsh'
 	echo -e "complete"
 	echo -e "\n\nnow you should choose the font of powerline in the shell config\n\n"
 fi
