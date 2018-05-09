@@ -13,4 +13,13 @@
 #	echo "Enjoy"
 
 echo -e "\n\nspacevim=================>>\n\n"
-curl -sLf https://spacevim.org/install.sh | bash
+
+echo "1.Chinese"
+echo "2.English"
+read -p "cn or en?(default is cn),Input your number:" -t 5 CN_OR_EN
+if [[ $? -eq 142 ]]
+then
+  curl -sLf https://spacevim.org/cn/install.sh | bash
+else
+  curl -sLf https://spacevim.org/install.sh | bash
+fi
