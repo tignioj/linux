@@ -19,7 +19,13 @@ echo "2.English"
 read -p "cn or en?(default is cn),Input your number:" -t 5 CN_OR_EN
 if [[ $? -eq 142 ]]
 then
+  ehco "timeout, default cn"
   curl -sLf https://spacevim.org/cn/install.sh | bash
 else
-  curl -sLf https://spacevim.org/install.sh | bash
+  if [[ $CN_OR_EN -eq 1 ]]
+  then
+    curl -sLf https://spacevim.org/cn/install.sh | bash
+  else
+    curl -sLf https://spacevim.org/install.sh | bash
+  fi
 fi
