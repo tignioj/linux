@@ -13,7 +13,7 @@
 #	echo "Enjoy"
 
 echo -e "\n\nspacevim=================>>\n\n"
-
+echo 000000 | sudo -S pacman -S --noconfirm --needed curl
 echo "1.Chinese"
 echo "2.English"
 read -p "cn or en?(default is cn),Input your number:" -t 5 CN_OR_EN
