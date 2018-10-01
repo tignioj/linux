@@ -1,1 +1,1 @@
-Personal linux application's config
+Personal config of linux application
