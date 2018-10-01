@@ -1,1 +1,1 @@
-ubuntu17.10_config
+Personal linux application's config
